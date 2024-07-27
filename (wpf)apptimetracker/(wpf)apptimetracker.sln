@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "(wpf)apptimetracker", "(wpf)apptimetracker.csproj", "{96EC7B02-FC49-4B42-BF55-83D51DADD133}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96EC7B02-FC49-4B42-BF55-83D51DADD133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96EC7B02-FC49-4B42-BF55-83D51DADD133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96EC7B02-FC49-4B42-BF55-83D51DADD133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96EC7B02-FC49-4B42-BF55-83D51DADD133}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88FE43EA-A19C-404A-9673-BB7E6C09FD30}
+	EndGlobalSection
+EndGlobal
