@@ -31,29 +31,29 @@ This project is a Screen Activity Tracker application that monitors which applic
 
 ## Desktop Application (WPF)
 
-    Open the project in Visual Studio:
-    Open the solution file ScreenActivityTracker.sln in Visual Studio.
+Open the project in Visual Studio:
+Open the solution file ScreenActivityTracker.sln in Visual Studio.
 
-    Restore NuGet packages:
-    Visual Studio should automatically restore the necessary NuGet packages, including Microsoft.Web.WebView2.
+Restore NuGet packages:
+Visual Studio should automatically restore the necessary NuGet packages, including Microsoft.Web.WebView2.
 
-    Build and run the application:
-    Build the solution and run the WPF application. It will open a window displaying the SvelteKit frontend.
+Build and run the application:
+Build the solution and run the WPF application. It will open a window displaying the SvelteKit frontend.
 
 ## Usage
 
-    Web Interface: Navigate to http://localhost:5173 in your web browser to view the activity tracker interface.
-    Desktop Interface: Run the WPF application from Visual Studio to view the activity tracker interface in a desktop window.
+Web Interface: Navigate to http://localhost:5173 in your web browser to view the activity tracker interface.
+Desktop Interface: Run the WPF application from Visual Studio to view the activity tracker interface in a desktop window.
 
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit pull requests for any improvements or bug fixes.
 
-    Fork the repository.
-    Create a new branch: git checkout -b feature-branch
-    Make your changes and commit them: git commit -m 'Add some feature'
-    Push to the branch: git push origin feature-branch
-    Submit a pull request.
+Fork the repository.
+Create a new branch: git checkout -b feature-branch
+Make your changes and commit them: git commit -m 'Add some feature'
+Push to the branch: git push origin feature-branch
+Submit a pull request.
 
 ## License
 
