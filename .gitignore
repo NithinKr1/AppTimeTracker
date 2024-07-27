@@ -19,3 +19,14 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Ignore Visual Studio temporary files, build results, and
+# include the .vs directory, which should not be tracked
+.vs/
+bin/
+obj/
+
+# Ignore SvelteKit build outputs
+.svelte-kit/
+build/
+

@@ -43,8 +43,6 @@ def track_activity():
                 process_time[part] = 0
             process_time[part] = process_time[part] + int(time.time()) - timestamp[current_app + current_window_title]
 
-        print(process_time)
-
 if __name__ == "__main__":
     from threading import Thread
     tracking_thread = Thread(target=track_activity)
