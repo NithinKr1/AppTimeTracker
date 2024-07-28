@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "SQThBFT21oo=",
+  "success": true,
+  "projectFilePath": "C:\\nithinprojects\\AppTimeTracker\\(wpf)apptimetracker\\(wpf)apptimetracker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nithin\\.nuget\\packages\\microsoft.web.webview2\\1.0.2592.51\\microsoft.web.webview2.1.0.2592.51.nupkg.sha512"
+  ],
+  "logs": []
+}
