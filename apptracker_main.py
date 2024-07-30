@@ -49,7 +49,7 @@ class ScreenActivityTracker:
                 logging.error(f"Error tracking activity: {e}")
 
     def get_sorted_process_time(self):
-        sorted_process_time = OrderedDict(sorted(self.process_time.items(), key=lambda item: item[1], reverse=True))
+        sorted_process_time = {k: v for k, v in sorted(self.process_time.items(), key=lambda item: item[1], reverse=True)}
         return jsonify(sorted_process_time)
 
 def create_app(sleep_time):
