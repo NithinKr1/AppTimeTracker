@@ -65,19 +65,19 @@ def create_app(tracker):
 
     return app
 
-def on_exit(icon, item):
-    icon.stop()
-    tracker.do_run = False
+# def on_exit(icon, item):
+#     icon.stop()
+#     tracker.do_run = False
 
-def setup_tray_icon():
-    # Determine the directory of the current script
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    image_path = os.path.join(script_dir, "apptrackerlogo.ico")
+# def setup_tray_icon():
+#     # Determine the directory of the current script
+#     script_dir = os.path.dirname(os.path.abspath(__file__))
+#     image_path = os.path.join(script_dir, "apptrackerlogo.ico")
 
-    image = Image.open(image_path)
-    menu = pystray.Menu(item('Quit', on_exit))
-    icon = pystray.Icon("Screen Activity Tracker", image, "Screen Activity Tracker", menu)
-    icon.run()
+#     image = Image.open(image_path)
+#     menu = pystray.Menu(item('Quit', on_exit))
+#     icon = pystray.Icon("Screen Activity Tracker", image, "Screen Activity Tracker", menu)
+#     icon.run()
 
 if __name__ == "__main__":
     import argparse
@@ -94,8 +94,10 @@ if __name__ == "__main__":
     tracking_thread.start()
 
     app = create_app(tracker)
-    flask_thread = Thread(target=lambda: app.run(port=args.port))
-    flask_thread.daemon = True
-    flask_thread.start()
+    # flask_thread = Thread(target=lambda: app.run(port=args.port))
+    # flask_thread.daemon = True
+    # flask_thread.start()
+    app=create_app(tracker)
+    app.run(port=args.port)
 
-    setup_tray_icon()
+    # setup_tray_icon()
