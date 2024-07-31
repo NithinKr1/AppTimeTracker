@@ -1,0 +1,4 @@
+First to install the scripts & bat files & frontend files to the user desired folder
+
+If the files are installed from the exe then the exe should use the SETUP1_startupbat.py to Add the startup app !
+
