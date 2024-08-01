@@ -9,7 +9,7 @@ import pygetwindow as gw
 import win32process
 import win32gui
 from titlecase import titlecase
-from pystray import MenuItem as item
+from flask_cors import CORS
 
 class ScreenActivityTracker:
     def __init__(self):
@@ -57,6 +57,7 @@ class ScreenActivityTracker:
 def create_app(tracker):
     '''Create a Flask app to serve the process time data.'''
     app = Flask(__name__)
+    CORS(app)  # Enable CORS for all routes
 
     @app.route('/data', methods=['GET'])
     def get_data():
@@ -81,5 +82,4 @@ if __name__ == "__main__":
     tracking_thread.start()
 
     app = create_app(tracker)
-    app=create_app(tracker)
     app.run(port=args.port)

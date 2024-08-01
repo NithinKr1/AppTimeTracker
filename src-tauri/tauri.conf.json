@@ -1,6 +1,7 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
+    "beforeBundleCommand": "python apptracker_main.py",
     "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run dev",
     "devPath": "http://localhost:5173",
@@ -11,6 +12,9 @@
     "version": "0.1.0"
   },
   "tauri": {
+
+    "sidecar":"apptracker_main.py",
+
     "allowlist": {
       "all": false
     },
