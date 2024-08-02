@@ -13,8 +13,6 @@
   },
   "tauri": {
 
-    // "sidecar":"apptracker_main.py",
-
     "allowlist": {
       "all": false
     },
