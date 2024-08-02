@@ -53,7 +53,7 @@
   }
 
   onMount(() => {
-    const ctx = document.querySelector('#usageChart') as HTMLCanvasElement;
+    const ctx = document.querySelector('#usageChart');
     if (ctx) {
       chartInstance = new Chart(ctx, {
         type: 'bar',
