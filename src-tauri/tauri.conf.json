@@ -12,9 +12,7 @@
     "version": "0.1.0"
   },
   "tauri": {
-
-    // "sidecar":"apptracker_main.py",
-
+  
     "allowlist": {
       "all": false
     },
@@ -62,7 +60,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "AppTimeTracker for Windows",
+        "title": "AppTimeTracker",
         "width": 800
       }
     ]
