@@ -10,15 +10,12 @@ import win32process
 import win32gui
 from titlecase import titlecase
 from flask_cors import CORS
-from datetime import datetime
 
 class ScreenActivityTracker:
     def __init__(self):
         self.process_time = {}
         self.timestamp = {}
         self.do_run = True
-        self.daily_usage = {str(i).zfill(2): 0 for i in range(24)}
-
 
     def get_active_window_title(self):
         try:
@@ -57,27 +54,14 @@ class ScreenActivityTracker:
         sorted_process_time = {k: v for k, v in sorted(self.process_time.items(), key=lambda item: item[1], reverse=True)}
         return jsonify(sorted_process_time)
 
-    def get_data(self):
-        total_usage = sum(self.process_time.values())
-        most_used_apps = sorted(self.process_time.items(), key=lambda x: x[1], reverse=True)[:5]
-        
-        return {
-            'total_usage': total_usage // 60,  # Convert to minutes
-            'hourly_usage': list(self.daily_usage.values()),
-            'most_used_apps': [{'name': app, 'duration': time // 60} for app, time in most_used_apps]
-        }
-
-    def update_daily_usage(self):
-        current_hour = datetime.now().strftime('%H')
-        self.daily_usage[current_hour] = sum(self.process_time.values()) // 60  # Convert to minutes
-
 def create_app(tracker):
+    '''Create a Flask app to serve the process time data.'''
     app = Flask(__name__)
-    CORS(app)
+    CORS(app)  # Enable CORS for all routes
 
     @app.route('/data', methods=['GET'])
     def get_data():
-        return jsonify(tracker.get_data())
+        return tracker.get_sorted_process_time()
 
     return app
 
@@ -96,15 +80,6 @@ if __name__ == "__main__":
     tracking_thread = Thread(target=tracker.track_activity, args=(args.sleep_time,))
     tracking_thread.daemon = True
     tracking_thread.start()
-    
-    def update_usage():
-        while True:
-            tracker.update_daily_usage()
-            time.sleep(1)  # Update every second
-
-    update_thread = Thread(target=update_usage)
-    update_thread.daemon = True
-    update_thread.start()
 
     app = create_app(tracker)
     app.run(port=args.port)
