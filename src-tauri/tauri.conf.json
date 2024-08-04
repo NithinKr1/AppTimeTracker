@@ -1,7 +1,6 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBundleCommand": "pythonw apptracker_main.py",
     "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run dev",
     "devPath": "http://localhost:5173",
@@ -12,14 +11,19 @@
     "version": "0.0.1"
   },
   "tauri": {
-  
     "allowlist": {
-      "all": false
+      "all": false,
+      "shell": {
+        "all": false,
+        "execute": true,
+        "sidecar": false,
+        "open": true
+      }
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
+      "category": "Productivity",
+      "copyright": "by Nithin V",
       "deb": {
         "depends": []
       },
@@ -31,7 +35,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.apptimetracker.build",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -40,7 +44,7 @@
         "providerShortName": null,
         "signingIdentity": null
       },
-      "resources": [],
+      "resources": ["apptracker_main.exe"],
       "shortDescription": "",
       "targets": "all",
       "windows": {

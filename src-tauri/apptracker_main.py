@@ -73,7 +73,7 @@ if __name__ == "__main__":
     parser.add_argument('--port', type=int, default=5000, help='The port to run the Flask app on.')
     args = parser.parse_args()
 
-    logging.basicConfig(filename='screen_activity_tracker.log', level=logging.INFO)
+    # logging.basicConfig(filename='screen_activity_tracker.log', level=logging.INFO)
 
     # Create a ScreenActivityTracker instance 
     tracker = ScreenActivityTracker()
