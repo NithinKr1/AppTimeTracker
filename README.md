@@ -1,67 +1,97 @@
-# Screen Activity Tracker
+# AppTimeTracker for Windows
 
-This project is a Screen Activity Tracker application that monitors which applications and websites are used most frequently on a user's system. It includes a backend service that tracks this information and a frontend interface to display it. The frontend interface can be accessed through a web browser or a Windows WPF application using WebView2.
+Welcome to **AppTimeTracker**, a minimalistic yet powerful screen time tracking app for Windows. This application is built with a modern tech stack, featuring **SvelteKit** for the frontend, **Python** for the backend, and **Tauri** to bundle it all into an efficient, lightweight desktop app.
 
 ## Table of Contents
+
+- [Introduction](#introduction)
 - [Features](#features)
-- [Architecture](#architecture)
-- [Requirements](#requirements)
-- [Setup Instructions](#setup-instructions)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Current Limitations](#current-limitations)
+- [Future Plans](#future-plans)
+- [Acknowledgments](#acknowledgments)
+
+## Introduction
+
+The idea behind AppTimeTracker came from the need to monitor screen time efficiently, similar to how Apple Screen Time works on mobile devices. This journey began with basic Python knowledge and evolved into a functional app within a week, thanks to GPT-4's assistance and some traditional learning methods.
 
 ## Features
-- Tracks the active window and application usage. Similar to iphone's Screen Time and Android's Digital Wellbeing
-- Displays usage statistics in real-time.
-- Web-based frontend built with SvelteKit.
-- Windows desktop application using WPF and WebView2.
 
-## Architecture
-- **Backend**: Python with Flask, `psutil`, `win32gui`, and `pygetwindow`.
-- **Frontend**: SvelteKit for the web interface.
-- **Desktop Application**: WPF with WebView2 for displaying the SvelteKit frontend.
+- **Real-time Screen Time Tracking**: Monitor the active window and application usage in real-time.
+- **Minimalist UI**: Simple and intuitive interface built with SvelteKit.
+- **Python Backend**: Leverages Python for tracking processes and serving data.
+- **Tauri Integration**: Bundled with Tauri for an optimized, lightweight desktop application.
+- **Persistent Tracking**: Continues tracking until the app is closed.
 
-## Requirements
-- Python 3.8+
-- Node.js 14+
-- .NET Core 3.1 or later
-- Visual Studio 2019 or later (for WPF application)
-- Microsoft Edge WebView2 Runtime
+## Tech Stack
 
-## Desktop Application (WPF)
+- **Frontend**: SvelteKit
+- **Backend**: Python
+- **Desktop Integration**: Tauri (Rust)
 
-Open the project in Visual Studio:
-Open the solution file ScreenActivityTracker.sln in Visual Studio.
+## Installation
 
-Restore NuGet packages:
-Visual Studio should automatically restore the necessary NuGet packages, including Microsoft.Web.WebView2.
+### Prerequisites
 
-Build and run the application:
-Build the solution and run the WPF application. It will open a window displaying the SvelteKit frontend.
+- **Node.js** (for SvelteKit)
+- **Python 3** (for backend)
+- **Tauri** (for bundling the application)
+
+### Steps
+
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/yourusername/AppTimeTracker.git
+    cd AppTimeTracker
+    ```
+
+2. **Install Frontend Dependencies**:
+    ```bash
+    cd ../AppTimeTracker
+    npm install
+    ```
+
+3. **Build the Tauri App**:
+    ```bash
+    cd ../AppTimeTracker/src-tauri
+    cargo build
+    ```
+
+4. **Run the App**:
+    ```bash
+    cd ../AppTimeTracker
+    npm tauri dev
+    ```
 
 ## Usage
 
-Web Interface: Navigate to http://localhost:5173 in your web browser to view the activity tracker interface.
-Desktop Interface: Run the WPF application from Visual Studio to view the activity tracker interface in a desktop window.
+1. **Start the App**:
+    - Run the Tauri app which starts the Python script in the background.
+    - The app UI will show the screen time from the moment it starts.
 
-## Contributing
+2. **Track Screen Time**:
+    - The app captures the active window title and executable file name to calculate usage time.
 
-Contributions are welcome! Please fork the repository and submit pull requests for any improvements or bug fixes.
+3. **Enable App on Startup**:
+    - Toggle the switch in the UI to enable or disable the app on system startup.
 
-Fork the repository.
-Create a new branch: git checkout -b feature-branch
-Make your changes and commit them: git commit -m 'Add some feature'
-Push to the branch: git push origin feature-branch
-Submit a pull request.
+## Current Limitations
 
-## License
+- **Stopping the Python Script**: Currently, the Python script does not stop running unless the system is restarted. This is a known issue and will be addressed in future updates.
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Future Plans
 
-### Notes:
-- Replace `https://github.com/yourusername/screen-activity-tracker.git` with the actual URL of your GitHub repository.
-- Update the `.NET Core` version and Visual Studio version based on your actual project requirements if they differ.
-- Ensure you include a `requirements.txt` file in your project root for Python dependencies and a `package.json` in the `svelte-frontend` directory for Node.js dependencies.
-- If there are additional setup steps or dependencies, be sure to add them to the `Setup Instructions` section.
+- **Enhanced UI**: Improve the UI/UX for better visualization of screen time.
+- **Real-time Database**: Store and retrieve screen time data for detailed analysis.
+- **Advanced Features**: Integrate LLM for categorizing app usage and providing productivity insights.
+- **Optimize Performance**: Transition backend logic to Rust for more efficiency.
 
+## Acknowledgments
+
+A big thanks to GPT-4 for its invaluable assistance and to the traditional resources like StackOverflow, Reddit, and various tutorials for providing additional insights. Special mention to the Tauri community for their robust framework and support.
+
+## Final Thoughts
+
+Creating AppTimeTracker was an exciting journey from basic Python knowledge to developing a functional desktop app. This project highlights the balance between leveraging AI tools like GPT-4 and traditional learning methods for rapid development and personal growth.
