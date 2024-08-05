@@ -1,6 +1,6 @@
-# AppTimeTracker for Windows
+# AppTimeTracker for Windows (v0.1.0)
 
-Welcome to **AppTimeTracker**, a simple screen time tracking app for Windows (for now). This application is built with a modern tech stack, featuring **SvelteKit** for the frontend, **Python** & **Rust** for the backend, and **Tauri** to bundle it all into an efficient, lightweight desktop app.
+Welcome to **AppTimeTracker** v0.1.0, a simple screen time tracking app for Windows (for now). This application is built with a modern tech stack, featuring **SvelteKit** for the frontend, **Python** & **Rust** for the backend, and **Tauri** to bundle it all into an efficient, lightweight desktop app.
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ The idea behind AppTimeTracker came from the need to monitor screen time efficie
 ## Tech Stack
 
 - **Frontend**: SvelteKit
-- **Backend**: Python
+- **Backend**: Python(For Now), Rust (In upcoming release)
 - **Desktop Integration**: Tauri (Rust)
 
 ## Installation
@@ -74,7 +74,7 @@ The idea behind AppTimeTracker came from the need to monitor screen time efficie
 2. **Track Screen Time**:
     - The app captures the active window title and executable file name to calculate usage time.
 
-3. **Enable App on Startup**:
+3. **Enable App on Startup**(Still Work in Progress):
     - Toggle the switch in the UI to enable or disable the app on system startup.
 
 ## Current Limitations
@@ -85,7 +85,7 @@ The idea behind AppTimeTracker came from the need to monitor screen time efficie
 
 - **Enhanced UI**: Improve the UI/UX for better visualization of screen time.
 - **Real-time Database**: Store and retrieve screen time data for detailed analysis.
-- **Advanced Features**: Integrate LLM for categorizing app usage and providing productivity insights.
+- **Advanced Features**: Integrate LLM for categorizing app usage and providing productivity insights.:)
 - **Optimize Performance**: Transition backend logic to Rust for more efficiency.
 
 ## Acknowledgments
@@ -94,4 +94,4 @@ A big thanks to GPT-4 for its invaluable assistance and to the traditional resou
 
 ## Final Thoughts
 
-Creating AppTimeTracker was an exciting journey from basic Python knowledge to developing a functional desktop app. This project highlights the balance between leveraging AI tools like GPT-4 and traditional learning methods for rapid development and personal growth.
+Creating AppTimeTracker was an exciting journey from basic Python knowledge to developing a functional desktop app. This project highlights the balance between leveraging AI tools like GPT-4 and traditional learning methods for rapid development and personal growth. While the code may not be perfect, my idea was good.😊
