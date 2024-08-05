@@ -1,6 +1,6 @@
 # AppTimeTracker for Windows
 
-Welcome to **AppTimeTracker**, a minimalistic yet powerful screen time tracking app for Windows. This application is built with a modern tech stack, featuring **SvelteKit** for the frontend, **Python** for the backend, and **Tauri** to bundle it all into an efficient, lightweight desktop app.
+Welcome to **AppTimeTracker**, a simple screen time tracking app for Windows (for now). This application is built with a modern tech stack, featuring **SvelteKit** for the frontend, **Python** & **Rust** for the backend, and **Tauri** to bundle it all into an efficient, lightweight desktop app.
 
 ## Table of Contents
 
